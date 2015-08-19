@@ -1,0 +1,145 @@
+10.6.3.239
+aveen.kumarp
+Lync@406
+
+akum0001
+password86
+
+oracle ALL=(ALL) NOPASSWD:ALL
+
+==================================================================================
+Host Name . . . . . . . . . . . . : pabet-vmmdfc206
+ethernet adapter Local Area Connection:
+
+ Connection-specific DNS Suffix  . : sncrcorp.net
+ Description . . . . . . . . . . . : Intel(R) PRO/1000 MT Network Connection
+ Physical Address. . . . . . . . . : 00-50-56-A6-14-90
+ IPv4 Address. . . . . . . . . . . : 10.6.2.29(Preferred)
+ Subnet Mask . . . . . . . . . . . : 255.255.252.0
+ Default Gateway . . . . . . . . . : 10.6.0.5
+ DHCP Server . . . . . . . . . . . : 10.4.52.15
+
+
+ DNS Servers . . . . . . . . . . . : 10.4.52.23
+                                     10.4.52.22
+ NetBIOS over Tcpip. . . . . . . . : Enabled
+
+==================================================================================
+
+
+slpunk  http://pabetszspl01p:8000/en-US
+admin
+Ea$t0n
+
+
+index=* host=nl-amsatvcp01p
+==================================================================================
+https://pabetspevc03p:9443/vsphere-client/
+https://pabetspevc03p:9443/vsphere-client
+==================================================================================
+http://10.4.52.133/files/weblogic12/
+==================================================================================
+ps axo pid,%mem,%cpu,rss,vsz,comm|grep -i java|grep -v grep
+==================================================================================
+Before you restart servers which has huge file system volume mounted, modify the Check interval and Mount Count to only check after 100 mounts or a 6 month period.
+
+tune2fs -c 100 -i 6m /dev/<partition name>
+
+==================================================================================
+pgrep java > file ; while read i;  do echo " Pid $i " ; grep VmSize /proc/$i/status ; done < ./file
+
+==================================================================================
+mdfuser(nl-amsapvcp01p):cd backup/
+/opt/dataextract/backup
+mdfuser(nl-amsapvcp01p):cd DPDHL/
+/opt/dataextract/backup/DPDHL
+mdfuser(nl-amsapvcp01p):ls -al SOC_0457ba7e-0a33-401c-4524-670b46d7c5e8_DailyExtract_20150513073022.csv
+-rw-r--r-- 1 mdfuser mdf 84667228 May 13 07:30 SOC_0457ba7e-0a33-401c-4524-670b46d7c5e8_DailyExtract_20150513073022.csv
+/opt/dataextract/backup/DPDHL
+mdfuser(nl-amsapvcp01p):Sftp -i /home/mdfuser/.ssh/datanet_id :S    
+Connected to 195.243.86.148.
+sftp> cd DPDHL
+sftp> ls -la
+sftp>
+
+==================================================================================
+
+java -Xmx1024m –jar wls_generic-12.1.2.jar -silent -responseFile /opt/Oracle/responsefile
+
+==================================================================================
+ last reboot | less
+
+Display list of last shutdown entries: last -x | less
+
+or more precisely: last -x | grep shutdown | less
+/var/log/debug
+/var/log/syslog (will be pretty full and may be harder to browse)
+/var/log/user.log
+/var/log/kern.log
+/var/log/boot
+
+
+egrep -i '(shut|reboot)' boot.msg > restart.log
+egrep -i '(shut|reboot)' messages > reboots.log
+
+==================================================================================
+lsof | grep -e "[[:digit:]]\+w" | grep java
+==================================================================================
+nproc
+==================================================================================
+cat /proc/net/sockstat java
+
+==================================================================================
+ss -ap | grep java | wc -l  :  lsof -i | grep java  | wc -l
+==================================================================================
+vncserver -geometry 1440x900
+==================================================================================
+ILO url
+
+https://pabetbp107a.sncrcorp.net/
+
+==================================================================================
+useradd -u 3062 -g 100 -c "Chittaranjan_Panda" -d /home/cpan0001 -s /bin/bash cpan0001
+==================================================================================
+sudo sed -i "s/mirrorlist=https/mirrorlist=http/" /etc/yum.repos.d/epel.repo
+==================================================================================
+mount -o rw,remount /
+==================================================================================
+sed -i '/hello/ i\synchronoss' file1
+==================================================================================
+http://10.16.4.127/sreforum/index.php/topic,3.msg7.html#new
+==================================================================================
+Pam_tally2 -u <username>
+==================================================================================
+chattr +i client.rb
+==================================================================================
+free && sync && echo 3 > /proc/sys/vm/drop_caches && free
+==================================================================================
+0 4 * * * sync; echo 1 > /proc/sys/vm/drop_caches
+==================================================================================
+export M2_HOME=/opt/apache-maven-3.2.1
+export PATH=$M2_HOME/bin:${PATH}
+mvn compile
+mvn package
+java -cp target/MavenTestapp-1.0-SNAPSHOT.jar org.chinnus.App
+
+==================================================================================
+cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.$(date "+%b_%d_%Y_%H.%M.%S")
+==================================================================================
+
+https://appsrv.voxmobili.com/maestro/index.php
+sangangouda.patil
+Onm0bile
+==================================================================================
+find /app -type f -size +100000k -exec ls -lrth {} \; | awk '{ print $9": " $5}'
+==================================================================================
+https://pabetspchf01p.sncrcorp.net:10443/nodes
+==================================================================================
+sfdisk -l 
+==================================================================================
+https://portail.fr.clara.net/content-manager/Tickets
+==================================================================================
+grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage "%"}'
+==================================================================================
+ echo -n | openssl s_client -connect addressbook.vodafone.com:443
+==================================================================================
